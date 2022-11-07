@@ -1,1 +1,12 @@
-/*# sourceMappingURL=style.css.map */
+.container {
+  display: grid;
+}
+
+.sideBarNav {
+  display: grid;
+  grid-template-columns: 1fr 50fr;
+}
+
+.sideBarNav ul {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */
