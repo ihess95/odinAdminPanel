@@ -1,10 +1,47 @@
 .container {
   display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 1fr 2fr;
 }
 .sideBarNav {
   display: grid;
-  grid-template-columns: 1fr 50fr;
+  grid-template-columns: 25% 75%;
+  grid-area: 1/1 / span 2/1;
 }
 .sideBarNav ul {
   list-style: none;
+}
+.navBar {
+  grid-area: 1/2/2/2;
+  display: grid;
+}
+.navBar ul {
+  grid-area: 1/1/2/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 2fr;
+}
+.topNav {
+  grid-area: 1/1/1 / span 2;
+  display: flex;
+  justify-content: space-between;
+  .searchDiv {
+    width: 50vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  textarea {
+    width: 40vh;
+    height: 2.5vh;
+  }
+  .notifDiv {
+    width: 25vh;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.bottomNav {
+  grid-area: 2/1/2/2;
+  display: flex;
+  justify-content: center;
 }
