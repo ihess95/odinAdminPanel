@@ -1,12 +1,21 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
 .container {
   display: grid;
+  gap: 10px;
   grid-template-columns: 25% 75%;
   grid-template-rows: 1fr 2fr;
 }
+.sideBar {
+  grid-area: 1/1 / span 2 /2;
+}
 .sideBarNav {
+  background-color: green;
+  height: 100vh;
   display: grid;
   grid-template-columns: 25% 75%;
-  grid-area: 1/1 / span 2/1;
 }
 .sideBarNav ul {
   list-style: none;
@@ -41,7 +50,31 @@
   }
 }
 .bottomNav {
-  grid-area: 2/1/2/2;
+  grid-area: 2/1/2 / span 2;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  .welcomeDiv {
+    display: flex;
+    justify-content: flex-start;
+    p {
+      margin: 0;
+    }
+    .welcomeIcon {
+    }
+    .welcomeTag {
+    }
+  }
+  .buttonDiv {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.contentDiv {
+  grid-area: 2/2/2/2;
+  .projectsDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  }
 }
