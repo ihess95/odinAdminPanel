@@ -1,21 +1,25 @@
+html,
 body {
   padding: 0px;
   margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 .container {
   display: grid;
-  gap: 10px;
-  grid-template-columns: 25% 75%;
+  min-width: 100%;
+  grid-template-columns: 200px 1fr;
   grid-template-rows: 1fr 2fr;
 }
 
 .sideBar {
   grid-area: 1/1/span 2/2;
+  background-color: green;
 }
 
 .sideBarNav {
-  background-color: green;
+  font-size: 2.1vh;
   height: 100vh;
   display: grid;
   grid-template-columns: 25% 75%;
@@ -26,8 +30,18 @@ body {
 }
 
 .navBar {
+  background-color: blue;
   grid-area: 1/2/2/2;
   display: grid;
+  height: 100px;
+}
+.navBar h1 {
+  padding: 0px;
+  margin: 0px;
+}
+.navBar button {
+  margin: 0px;
+  padding: 10px;
 }
 
 .navBar ul {
