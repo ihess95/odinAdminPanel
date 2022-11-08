@@ -75,7 +75,10 @@ body {
 }
 
 .contentDiv {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   grid-area: 2/2/2/2;
+  gap: 10px;
 }
 .contentDiv .projectsDiv {
   display: grid;
